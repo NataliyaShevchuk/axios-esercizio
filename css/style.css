@@ -1,0 +1,55 @@
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #001633;
+    }
+    
+    .loading-overlay svg {
+        overflow: visible;
+    }
+    
+    .loading-overlay .left-bar-path {
+        transform-origin: 50% center;
+        animation: logo_left_bar 3s linear 1s infinite;
+    }
+    
+    .loading-overlay .right-bar-path {
+        transform-origin: 50% center;
+        animation: logo_right_bar 3s linear 1.25s infinite;
+    }
+    
+    @keyframes logo_left_bar {
+        0% {
+        transform: translate(0) rotate(0) scale(1);
+        }
+        30% {
+        transform: translate(-50%) rotate(180deg) scale(.6);
+        }
+        60%{
+        transform: translate(0) rotate(360deg) scale(1);
+        }
+        100%{
+        transform: translate(0) rotate(360deg) scale(1);
+        }
+    }
+    
+    @keyframes logo_right_bar {
+        0% {
+        transform: translate(0) rotate(0) scale(1);
+        }
+        30% {
+        transform: translate(50%) rotate(180deg) scale(1.3);
+        }
+        60%{
+        transform: translate(0) rotate(360deg) scale(1);
+        }
+        100%{
+        transform: translate(0) rotate(360deg) scale(1);
+        }
+    }
